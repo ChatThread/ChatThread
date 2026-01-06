@@ -36,6 +36,18 @@ For web only:
 pnpm run dev:web
 ```
 
+## Releases / Downloads
+
+Download the official release builds and install the platform package that fits your system:
+
+- **Web (instant):** https://chatthread.top/chat/
+- **Windows (Microsoft Store):** https://apps.microsoft.com/detail/9nvk755bn4b8
+- **macOS (App Store — Intel / Apple Silicon):** https://apps.apple.com/app/chatthread/id6744828531
+- **iOS (App Store):** https://apps.apple.com/app/chatthread-ai-assistant/id6744828531
+
+If you need direct installer files (dmg/AppImage/exe) or older releases, check the official website Downloads section or the project repository releases page.
+
+
 ## Folder Structure
 ```
 app/           # Main frontend (React, Vite, Electron)
@@ -94,6 +106,18 @@ Web 端启动：
 ```bash
 pnpm run dev:web
 ```
+
+## 发行版 / 下载
+
+下载官方发行版本并选择适配你系统的安装包：
+
+- **网页版（即时启动）：** https://chatthread.top/chat/
+- **Windows（Microsoft 商店）：** https://apps.microsoft.com/detail/9nvk755bn4b8
+- **macOS（App Store — Intel / Apple Silicon）：** https://apps.apple.com/app/chatthread/id6744828531
+- **iOS（App Store）：** https://apps.apple.com/app/chatthread-ai-assistant/id6744828531
+
+如果需要直接的安装文件（dmg、AppImage、exe）或历史发行版本，请访问官方网站的“下载”页面或仓库的 Releases 页查看。
+
 
 ## 目录结构
 ```
