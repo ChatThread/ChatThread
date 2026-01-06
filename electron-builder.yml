@@ -1,0 +1,42 @@
+appId: com.example.chatthread
+productName: ChatThread
+directories:
+  buildResources: resources/build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+asarUnpack:
+  - resources/**
+win:
+  target: nsis
+  icon: resources/build/icons/win/icon.ico
+  executableName: ChatThread
+nsis:
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+mac:
+  target:
+    - dmg
+  minimumSystemVersion: "12.0"
+  category: "public.app-category.productivity"
+  icon: resources/build/icons/mac/icon.icns
+  entitlementsInherit: resources/build/entitlements.mac.plist
+  notarize: false
+dmg:
+  artifactName: ${name}-${version}.${ext}
+linux:
+  icon: resources/build/icons/png/icon512.png
+  target:
+    - AppImage
+    - snap
+    - deb
+  category: Utility
+appImage:
+  artifactName: ${name}-${version}.${ext}
+npmRebuild: false

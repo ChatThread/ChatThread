@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>ChatThread</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; font-src 'self' data: https:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:"
+    />
+    <style>
+      /* 初始样式 - 跟随系统偏好 */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-color: #171719;
+          --text-color: #ffffff;
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg-color: #ffffff;
+          --text-color: #000000;
+        }
+      }
+      
+      /* 确保从一开始就有背景色 */
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+      }
+
+      #app {
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-color);
+      }
+
+      body, #app {
+        transition: background-color 0.01s ease;
+      }
+
+      body {
+        opacity: 1;
+        transition: opacity 0.01s ease-in-out;
+      }
+    </style>
+   
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script type="module" src="./renderer.tsx"></script>
+    <!-- Intentionally no third-party auth scripts are loaded by default. -->
+  </body>
+</html>

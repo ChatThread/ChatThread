@@ -1,0 +1,1 @@
+export const WEB_CATEGERY_DATA = [] as const;
